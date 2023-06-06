@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+ 
+html {
+    scroll-behavior: smooth;
+
+    }
+
+.cabecalho {
+    background-color: #000000;
+    color: white;       
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20 px 0;
+    gap: 80px;
+    
+    }
+
+    .cabecalho-imagem{
+    width: 20%;
+    }
+
+.cabecalho-lista-item{
+    display: inline-block;
+    margin: 0 16px;
+    
+   
+}
+
+.cabecalho-lista-item :hover{
+    color: white;
+    text-decoration: none;
+}
+
+#tecnico { 
+    color: white;
+    padding: 35px;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:radial-gradient( black, black, black, blue);
+    gap: 159px;
+    
+}      
+      
+
+.tecnico-div-conteudo{
+    width: 50%;
+    text-align: center;
+    
+}
+
+.tecnico-titulo{
+    padding: 35px 0;
+    font-size: 69px;
+    color: rgb(146, 40, 245); 
+}
+
+.ilustra-curso {
+    height: 450px;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+}
+ 
+.estudante-titulo{
+    text-align: center;
+    background: #000000;
+    color: rgb(146, 40, 245);
+    padding: 29px;
+    font-size: 49px;
+    padding-bottom: 60px;
+    padding-top: 50px;
+
+}
+
+.estudante-imagem{
+    height: 120px;
+}
+
+.estudante-icone{
+    height: 40px;
+    background: radial-gradient( white, white, black );
+}
+
+.estudante-todos{
+    display: flex;
+    justify-content: center;
+    gap: 159px;
+    background:black;
+    color: white;
+    text-align: center;
+    
+}
+
+.rodape{
+    background: linear-gradient(black, rgb(146, 40, 245), black);
+    text-align: center;
+    padding: 48px;
+    font-size: 21px;
+}
+
+.cabecalho-lista-item {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #000000;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+  
+  .cabecalho-lista-item:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .cabecalho-lista-item-content a {
+    color: blue;
+    text-decoration: none;
+}
+
+  .cabecalho-lista-item-content {
+    position: relative;
+    z-index: 1;
+   }
+
+  .cabecalho-lista-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgb(146, 40, 245) 10.8%,
+      rgb(73, 60, 253) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+  .item-cabecalho{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
