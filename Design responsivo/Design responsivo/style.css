@@ -1,0 +1,159 @@
+:root {
+    --cor-1: #05FF00;
+    --cor-2: #1f00d1;
+    --font-1: 'Audiowide';
+    --font-2: 'Orbitron';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: gray;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 9vw;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    font-family: var(--font-1);
+    color: var(--cor-1);
+    height: 8vh;
+  }
+
+  a{
+    color: var(--cor-2);
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #menuIcon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  #menuIcon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  #menuToggle:checked ~ #menuIcon div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  #menuToggle:checked ~ #menuIcon div:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menuToggle:checked ~ #menuIcon div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  #menu {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    font-weight: 300;
+  }
+
+  #menu li {
+    margin: 0 10px;
+    font-family: var(--font-2);
+    color: var(--cor-2);
+  }
+
+  @media (max-width: 912px) {
+    header {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    #menuToggle {
+      display: block;
+      opacity: 0;
+    }
+
+    #menuIcon {
+      display: block;
+      margin-bottom: 7px;
+      cursor: pointer;
+    }
+
+    a:hover{
+        background-color: white;
+        display: block;
+    }
+    
+
+    #menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(0, 0, 0);
+      position: absolute;
+      top: 11vh;
+      right: 2.1vw;
+      width: 90vw;
+      padding: 20px;
+      border-radius: 8px;
+      animation: slideIn 0.9s;
+    }
+
+    #menuToggle:checked ~ #menu {
+      display: flex;
+    }
+
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: 699px) {
+    header {
+      justify-content: space-between;
+    }
+
+    .titulo{
+        font-size: 25px;
+    }
+
+  }
+
+  @media (max-width: 699px) {
+    header {
+      justify-content: space-between;
+    }
+
+    .titulo{
+        font-size: 23px;
+    }
+
+  }
