@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron&display=swap" rel="stylesheet">
+    <title>Design responsivo</title>
+</head>
+<body>
+ <header>
+      <h1 class="titulo">Inteligencia Artificial_</h1>
+      <nav>
+       <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" id="menuIcon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>   
+        <ul id="menu">
+          <li><a href="#principal">O que é</a></li>
+          <li><a href="#">O avanço</a></li>
+          <li><a href="#">Benefícios</a></li>
+        </ul>
+      </nav>
+ </header>
+
+    <script>
+        const menuIcon = document.getElementById('menuToggle');
+        const menuList = document.getElementById('menu');
+
+        menuIcon.addEventListener('change', () => {
+            if (menuIcon.checked) {
+                menuList.classList.add('active');
+            } else {
+                menuList.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
